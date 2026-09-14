@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Romdul — Cambodian-inspired secure login and registration portal.">
+    <meta name="keywords" content="Romdul, login, register, Cambodia, Khmer, sign up, authentication">
+    <meta name="author" content="Romdul">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Romdul — Login &amp; Register">
+    <meta property="og:description" content="Romdul secure login and registration portal.">
+    <meta property="og:url" content="https://www.romdul.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Romdul — Login &amp; Register">
+    <title>Romdul — Login &amp; Register</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo" aria-label="Romdul Home">
+                <span class="logo-icon">&#9670;</span>
+                <span class="logo-text">
+                    <span class="logo-rom">Rom</span><span class="logo-dul">dul</span>
+                </span>
+            </a>
+            <nav class="navbar-nav" aria-label="Main navigation">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Services</a>
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
+            <button class="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+    <main class="auth-container">
+        <div class="auth-wrapper">
+            <section class="auth-card login-card">
+                <div class="card-header">
+                    <h2>Welcome Back</h2>
+                    <p>Log in to your Romdul account</p>
+                </div>
+                <form class="auth-form" action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email" name="email" placeholder="you@example.com" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" name="password" placeholder="••••••••" required autocomplete="current-password">
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                </form>
+                <div class="card-footer">
+                    <p>Don't have an account? <a href="#" class="switch-link">Register here</a></p>
+                </div>
+            </section>
+            <section class="auth-card register-card">
+                <div class="card-header">
+                    <h2>Create Account</h2>
+                    <p>Join Romdul today</p>
+                </div>
+                <form class="auth-form" action="/register" method="POST">
+                    <div class="form-group">
+                        <label for="register-name">Full Name</label>
+                        <input type="text" id="register-name" name="name" placeholder="John Doe" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email Address</label>
+                        <input type="email" id="register-email" name="email" placeholder="you@example.com" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" name="password" placeholder="Create a strong password" required autocomplete="new-password" minlength="8">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm">Confirm Password</label>
+                        <input type="password" id="register-confirm" name="confirm_password" placeholder="Confirm your password" required autocomplete="new-password" minlength="8">
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="terms" required>
+                            <span>I agree to the <a href="#" class="terms-link">Terms &amp; Conditions</a></span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </form>
+                <div class="card-footer">
+                    <p>Already have an account? <a href="#" class="switch-link">Log in here</a></p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p class="footer-copyright">&copy; 2026 Romdul. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Support</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
