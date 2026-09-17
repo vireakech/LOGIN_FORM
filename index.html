@@ -21,26 +21,32 @@
 <body>
     <header class="navbar">
         <div class="navbar-container">
-            <a href="/" class="navbar-logo" aria-label="Romdul Home">
+            <a href="index.html" class="navbar-logo" aria-label="Romdul Home">
                 <img src="Romdoul-flower-drawing.png" alt="Romdul Logo" class="logo-image">
                 <span class="logo-text">
                     <span class="logo-rom">Rom</span><span class="logo-dul">dul</span>
                 </span>
             </a>
             <nav class="navbar-nav" aria-label="Main navigation">
-                <a href="#" class="nav-link active">Home</a>
-                <a href="#" class="nav-link">About</a>
-                <a href="#" class="nav-link">Services</a>
-                <a href="#" class="nav-link">Contact</a>
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </nav>
-            <button class="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <label for="nav-toggle" class="navbar-toggle" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
-            </button>
+            </label>
         </div>
+        <nav class="navbar-nav-mobile" aria-label="Mobile navigation">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
     </header>
     <main class="auth-container">
         <div class="auth-wrapper">
-            <section class="auth-card login-card">
+            <section class="auth-card login-card" id="login-card">
                 <div class="card-header">
                     <h2>Welcome Back</h2>
                     <p>Log in to your Romdul account</p>
@@ -64,10 +70,10 @@
                     <button type="submit" class="btn btn-primary btn-block">Log In</button>
                 </form>
                 <div class="card-footer">
-                    <p>Don't have an account? <a href="#" class="switch-link">Register here</a></p>
+                    <p>Don't have an account? <a href="#register-card" class="switch-link">Register here</a></p>
                 </div>
             </section>
-            <section class="auth-card register-card">
+            <section class="auth-card register-card" id="register-card">
                 <div class="card-header">
                     <h2>Create Account</h2>
                     <p>Join Romdul today</p>
@@ -98,7 +104,7 @@
                     <button type="submit" class="btn btn-primary btn-block">Register</button>
                 </form>
                 <div class="card-footer">
-                    <p>Already have an account? <a href="#" class="switch-link">Log in here</a></p>
+                    <p>Already have an account? <a href="#login-card" class="switch-link">Log in here</a></p>
                 </div>
             </section>
         </div>
