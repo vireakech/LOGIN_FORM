@@ -173,9 +173,14 @@ h1, h2, h3 {
   height: 36px;
   padding: 6px;
   cursor: pointer;
+
   z-index: 30;
   background: transparent;
   border: none;
+=======
+  padding: 0;
+  z-index: 30;
+
 }
 
 .navbar-toggle span {
@@ -188,6 +193,7 @@ h1, h2, h3 {
   transform-origin: center;
 }
 
+
 /* Hide the checkbox but keep it functional */
 .nav-toggle-input {
   position: absolute;
@@ -198,6 +204,10 @@ h1, h2, h3 {
 
 /* Hamburger animation when checked */
 .nav-toggle-input:checked ~ .navbar-container .navbar-toggle span:nth-child(1) {
+=======
+/* Hamburger animation when active */
+.navbar-toggle.is-active span:nth-child(1) {
+
   transform: translateY(7px) rotate(45deg);
 }
 
@@ -213,6 +223,7 @@ h1, h2, h3 {
   background-color: var(--dul-yellow);
 }
 
+
 /* Mobile navigation menu */
 .navbar-nav-mobile {
   display: none;
@@ -224,10 +235,29 @@ h1, h2, h3 {
 
 /* Show mobile menu when checkbox is checked */
 .nav-toggle-input:checked ~ .navbar-nav-mobile {
+=======
+.navbar-nav-mobile {
+  display: none;
+  flex-direction: column;
+  border-top: 1px solid rgba(217, 164, 65, 0.2);
+  padding: 8px 32px 16px;
+  background-color: rgba(18, 51, 43, 0.98);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 25;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Show mobile menu when it has the is-open class (controlled by JS) */
+.navbar-nav-mobile.is-open {
+
   display: flex;
 }
 
 .navbar-nav-mobile .nav-link {
+
   padding: 16px 32px;
   border-bottom: 1px solid rgba(217, 164, 65, 0.15);
   font-size: 1.1rem;
@@ -235,6 +265,14 @@ h1, h2, h3 {
   display: block;
   transition: color 0.2s ease, background-color 0.2s ease;
   text-decoration: none;
+=======
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(217, 164, 65, 0.12);
+  font-size: 1.1rem;
+  color: rgba(246, 240, 226, 0.85);
+  display: block;
+  transition: color var(--transition), background-color var(--transition);
+
 }
 
 .navbar-nav-mobile .nav-link:hover,
@@ -247,7 +285,10 @@ h1, h2, h3 {
 .navbar-nav-mobile .nav-link.active {
   color: var(--dul-yellow);
   border-bottom-color: transparent;
+
   font-weight: 600;
+=======
+
 }
 
 .navbar-nav-mobile .nav-link:last-child {
