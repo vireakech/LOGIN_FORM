@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- this is vireakech website -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Romdul — Instrument repair, custom commissions, lessons, rentals and worldwide shipping for Khmer musical instruments.">
@@ -168,58 +167,5 @@
             </div>
         </div>
     </footer>
-    <script>
-        // Mobile navigation - Pure CSS checkbox toggle
-        document.addEventListener('DOMContentLoaded', () => {
-            const navToggleCheckbox = document.getElementById('nav-toggle');
-            const navbarMobile = document.querySelector('.navbar-nav-mobile');
-            
-            if (navToggleCheckbox && navbarMobile) {
-                // Close mobile menu when clicking a nav link
-                navbarMobile.querySelectorAll('.nav-link').forEach(link => {
-                    link.addEventListener('click', () => {
-                        navToggleCheckbox.checked = false;
-                    });
-                });
-            }
-        });
-        // Mobile navigation toggle
-        const navToggleCheckbox = document.getElementById('nav-toggle');
-        const navbarToggle = document.querySelector('.navbar-toggle');
-        const navbarMobile = document.querySelector('.navbar-nav-mobile');
-
-        if (navToggleCheckbox && navbarToggle && navbarMobile) {
-            // Toggle mobile menu
-            navbarToggle.addEventListener('click', () => {
-                const isOpen = navbarMobile.classList.toggle('is-open');
-                navbarToggle.classList.toggle('is-active', isOpen);
-            });
-
-            // Close mobile menu when clicking a nav link
-            navbarMobile.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    navbarMobile.classList.remove('is-open');
-                    navbarToggle.classList.remove('is-active');
-                });
-            });
-
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!navbarToggle.contains(e.target) && !navbarMobile.contains(e.target)) {
-                    navbarMobile.classList.remove('is-open');
-                    navbarToggle.classList.remove('is-active');
-                }
-            });
-
-            // Handle escape key
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && navbarMobile.classList.contains('is-open')) {
-                    navbarMobile.classList.remove('is-open');
-                    navbarToggle.classList.remove('is-active');
-                    navbarToggle.focus();
-                }
-            });
-        }
-    </script>
 </body>
 </html>
