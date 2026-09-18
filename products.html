@@ -20,6 +20,7 @@
 </head>
 <body>
     <header class="navbar">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true">
         <div class="navbar-container">
             <a href="index.html" class="navbar-logo" aria-label="Romdul Home">
                 <img src="Romdoul-flower-drawing.png" alt="Romdul Logo" class="logo-image">
@@ -197,5 +198,22 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile navigation - Pure CSS checkbox toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggleCheckbox = document.getElementById('nav-toggle');
+            const navbarMobile = document.querySelector('.navbar-nav-mobile');
+            
+            if (navToggleCheckbox && navbarMobile) {
+                // Close mobile menu when clicking a nav link
+                navbarMobile.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navToggleCheckbox.checked = false;
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
