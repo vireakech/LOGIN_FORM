@@ -111,6 +111,7 @@ h1, h2, h3 {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  position: relative;
 }
 
 .navbar-logo {
@@ -173,6 +174,7 @@ h1, h2, h3 {
   border: none;
   cursor: pointer;
   padding: 0;
+  z-index: 30;
 }
 
 .navbar-toggle span {
@@ -184,6 +186,7 @@ h1, h2, h3 {
   transition: transform var(--transition), opacity var(--transition);
 }
 
+/* Hamburger animation when active */
 .navbar-toggle.is-active span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -196,13 +199,25 @@ h1, h2, h3 {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+.navbar-toggle:hover span {
+  background-color: var(--dul-yellow);
+}
+
 .navbar-nav-mobile {
   display: none;
   flex-direction: column;
   border-top: 1px solid rgba(217, 164, 65, 0.2);
   padding: 8px 32px 16px;
+  background-color: rgba(18, 51, 43, 0.98);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 25;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* Show mobile menu when it has the is-open class (controlled by JS) */
 .navbar-nav-mobile.is-open {
   display: flex;
 }
@@ -210,6 +225,22 @@ h1, h2, h3 {
 .navbar-nav-mobile .nav-link {
   padding: 12px 0;
   border-bottom: 1px solid rgba(217, 164, 65, 0.12);
+  font-size: 1.1rem;
+  color: rgba(246, 240, 226, 0.85);
+  display: block;
+  transition: color var(--transition), background-color var(--transition);
+}
+
+.navbar-nav-mobile .nav-link:hover,
+.navbar-nav-mobile .nav-link:focus {
+  color: var(--dul-yellow);
+  background-color: rgba(217, 164, 65, 0.1);
+  outline: none;
+}
+
+.navbar-nav-mobile .nav-link.active {
+  color: var(--dul-yellow);
+  border-bottom-color: transparent;
 }
 
 .navbar-nav-mobile .nav-link:last-child {
