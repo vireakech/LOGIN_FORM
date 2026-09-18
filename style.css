@@ -111,7 +111,6 @@ h1, h2, h3 {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  position: relative;
 }
 
 .navbar-logo {
@@ -167,20 +166,13 @@ h1, h2, h3 {
   display: none;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: 5px;
-  width: 36px;
-  height: 36px;
-  padding: 6px;
-  cursor: pointer;
-
-  z-index: 30;
-  background: transparent;
+  width: 32px;
+  height: 32px;
+  background: none;
   border: none;
-=======
+  cursor: pointer;
   padding: 0;
-  z-index: 30;
-
 }
 
 .navbar-toggle span {
@@ -189,106 +181,35 @@ h1, h2, h3 {
   width: 100%;
   background-color: var(--ivory);
   border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  transform-origin: center;
+  transition: transform var(--transition), opacity var(--transition);
 }
 
-
-/* Hide the checkbox but keep it functional */
-.nav-toggle-input {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* Hamburger animation when checked */
-.nav-toggle-input:checked ~ .navbar-container .navbar-toggle span:nth-child(1) {
-=======
-/* Hamburger animation when active */
 .navbar-toggle.is-active span:nth-child(1) {
-
   transform: translateY(7px) rotate(45deg);
 }
 
-.nav-toggle-input:checked ~ .navbar-container .navbar-toggle span:nth-child(2) {
+.navbar-toggle.is-active span:nth-child(2) {
   opacity: 0;
 }
 
-.nav-toggle-input:checked ~ .navbar-container .navbar-toggle span:nth-child(3) {
+.navbar-toggle.is-active span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-.navbar-toggle:hover span {
-  background-color: var(--dul-yellow);
-}
-
-
-/* Mobile navigation menu */
-.navbar-nav-mobile {
-  display: none;
-  flex-direction: column;
-  background-color: var(--ink);
-  border-top: 1px solid rgba(217, 164, 65, 0.3);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Show mobile menu when checkbox is checked */
-.nav-toggle-input:checked ~ .navbar-nav-mobile {
-=======
 .navbar-nav-mobile {
   display: none;
   flex-direction: column;
   border-top: 1px solid rgba(217, 164, 65, 0.2);
   padding: 8px 32px 16px;
-  background-color: rgba(18, 51, 43, 0.98);
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 25;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Show mobile menu when it has the is-open class (controlled by JS) */
 .navbar-nav-mobile.is-open {
-
   display: flex;
 }
 
 .navbar-nav-mobile .nav-link {
-
-  padding: 16px 32px;
-  border-bottom: 1px solid rgba(217, 164, 65, 0.15);
-  font-size: 1.1rem;
-  color: rgba(246, 240, 226, 0.85);
-  display: block;
-  transition: color 0.2s ease, background-color 0.2s ease;
-  text-decoration: none;
-=======
   padding: 12px 0;
   border-bottom: 1px solid rgba(217, 164, 65, 0.12);
-  font-size: 1.1rem;
-  color: rgba(246, 240, 226, 0.85);
-  display: block;
-  transition: color var(--transition), background-color var(--transition);
-
-}
-
-.navbar-nav-mobile .nav-link:hover,
-.navbar-nav-mobile .nav-link:focus {
-  color: var(--dul-yellow);
-  background-color: rgba(217, 164, 65, 0.1);
-  outline: none;
-}
-
-.navbar-nav-mobile .nav-link.active {
-  color: var(--dul-yellow);
-  border-bottom-color: transparent;
-
-  font-weight: 600;
-=======
-
 }
 
 .navbar-nav-mobile .nav-link:last-child {
