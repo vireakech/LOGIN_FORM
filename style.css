@@ -352,6 +352,7 @@ h1, h2, h3 {
 
 .card-header h2 {
   font-size: 1.6rem;
+  color: var(--ink-text);
   margin-bottom: 6px;
 }
 
